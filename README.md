@@ -24,7 +24,7 @@ if you want to generate DP with a button Element,use id `generate-dp`.
 
 ```<button id="generate-dp">Generate dp</button>```
 
-if you want to submit this Profile picture in `form`, use class name `generate-dp` to a `input` Element.
+if you want to submit this Profile picture in `form`, use class name `generate-dp` to a `input` button type Element.
 
 ```<input type="button" class="generate-dp" value="Submit" />```
 
