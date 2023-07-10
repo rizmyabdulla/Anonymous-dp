@@ -1,3 +1,7 @@
+const saveBtn = document.getElementById("save-dp");
+const generateBtn = document.getElementById("generate-dp");
+const submit = document.getElementsByClassName("generate-dp");
+
 // Set canvas properties
 const canvas = document.getElementById("profile-picture");
 const ctx = canvas.getContext("2d");
@@ -39,5 +43,34 @@ function getRandomColor() {
   return color;
 }
 
+window.onload = generatePattern;
+
 // Generate initial pattern
-generatePattern();
+generateBtn.addEventListener("click", generatePattern);
+
+// Save button click event
+saveBtn.addEventListener("click", function () {
+  // Convert canvas image to data URL
+  const dataURL = canvas.toDataURL("image/png");
+
+  // Create an anchor element
+  const link = document.createElement("a");
+  link.href = dataURL;
+  link.download = "User-DP.png";
+
+  // Simulate click on the anchor element
+  link.click();
+});
+
+submit.addEventListener("click", function () {
+  // Convert canvas image to data URL
+  const dataURL = canvas.toDataURL("image/png");
+
+  // Create an anchor element
+  const link = document.createElement("a");
+  link.href = dataURL;
+  link.download = "User-DP.png";
+
+  // Simulate click on the anchor element
+  link.click();
+});
