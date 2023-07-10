@@ -1,6 +1,6 @@
-const saveBtn = document.getElementById("save-dp");
-const generateBtn = document.getElementById("generate-dp");
-const submit = document.getElementsByClassName("generate-dp");
+const save_DP = document.getElementById("download-dp");
+const generate_DP = document.getElementById("generate-dp");
+const submit_DP = document.getElementsByClassName("submit-dp");
 
 // Set canvas properties
 const canvas = document.getElementById("profile-picture");
@@ -46,10 +46,10 @@ function getRandomColor() {
 window.onload = generatePattern;
 
 // Generate initial pattern
-generateBtn.addEventListener("click", generatePattern);
+generate_DP.addEventListener("click", generatePattern);
 
 // Save button click event
-saveBtn.addEventListener("click", function () {
+save_DP.addEventListener("click", function () {
   // Convert canvas image to data URL
   const dataURL = canvas.toDataURL("image/png");
 
@@ -62,15 +62,13 @@ saveBtn.addEventListener("click", function () {
   link.click();
 });
 
-submit.addEventListener("click", function () {
-  // Convert canvas image to data URL
-  const dataURL = canvas.toDataURL("image/png");
-
-  // Create an anchor element
-  const link = document.createElement("a");
-  link.href = dataURL;
-  link.download = "User-DP.png";
-
-  // Simulate click on the anchor element
-  link.click();
-});
+for (var i = 0; i < submit_DP.length; i++) {
+  submit_DP[i].addEventListener("click", async function () {
+    let imageBlob = await new Promise((resolve) =>
+      canvas.toBlob(resolve, "image/png")
+    );
+    let formData = new FormData();
+    formData.append("image", imageBlob, "dp.png");
+    console.log(formData.get("image"));
+  });
+}
