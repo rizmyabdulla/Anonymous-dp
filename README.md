@@ -1,5 +1,9 @@
 # Anonymous-dp
 
+## Live Preview
+
+Live preview available on : https://rizmyabdulla.github.io/Anonymous-dp/
+
 ## Anonymous-dp Intergration via CDN
 
 import javascript code via : https://cdn.jsdelivr.net/gh/RizmyAbdulla/Anonymous-dp@main/index.js
@@ -7,10 +11,6 @@ import javascript code via : https://cdn.jsdelivr.net/gh/RizmyAbdulla/Anonymous-
 ```
 <script src="https://cdn.jsdelivr.net/gh/RizmyAbdulla/Anonymous-dp@main/index.js"></script>
 ```
-
-## Live Preview
-
-Live preview available on : https://rizmyabdulla.github.io/Anonymous-dp/
 
 ## Using Anonymous-dp in HTML webpage
 
