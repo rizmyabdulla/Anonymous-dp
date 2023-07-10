@@ -18,13 +18,17 @@ create `canvas` element with id `profile-picture` with `width` 200 and `height` 
 
 you can save profile image by a creating a `button` Element with id `save-dp`
 
-```<button id="save-dp">Save dp</button>```
+```<button id="download-dp">Download dp</button>```
 
 if you want to generate DP with a button Element,use id `generate-dp`.
 
 ```<button id="generate-dp">Generate dp</button>```
 
-if you want to submit this Profile picture in `form`, use class name `generate-dp` to a `input` button type Element.
+if you want to submit this Profile picture in `form`, use class name `submit-dp` to a `input` button type Element.
 
-```<input type="button" class="generate-dp" value="Submit" />```
+```
+<form action="post">
+   <input type="button" class="submit-dp" value="Submit" />
+</form>
+```
 
