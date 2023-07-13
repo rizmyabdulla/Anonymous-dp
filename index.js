@@ -1,66 +1,67 @@
+const canvas = document.getElementById("profile-picture");
 const save_DP = document.getElementById("download-dp");
 const generate_DP = document.getElementById("generate-dp");
 const submit_DP = document.getElementsByClassName("submit-dp");
+const generate_DP_with_initials = document.getElementById(
+  "generate-dp-with-initials"
+);
+const profile_change_name = document.getElementById("profile-cname");
+const submit_name_change = document.getElementById("submit");
 
-// Set canvas properties
-const canvas = document.getElementById("profile-picture");
-const ctx = canvas.getContext("2d");
-const width = canvas.width;
-const height = canvas.height;
+window.onload = canvas.classList.add("mode-1");
 
-// Generate random pattern
-function generatePattern() {
-  // Clear canvas
-  ctx.clearRect(0, 0, width, height);
+function updateInitials() {
+  const firstName = document.querySelector(".profile-fname-input").value;
+  const lastName = document.querySelector(".profile-lname-input").value;
 
-  // Generate random colors
-  const colors = [getRandomColor(), getRandomColor(), getRandomColor()];
+  document.querySelector(".profile-fname").textContent = firstName;
+  document.querySelector(".profile-lname").textContent = lastName;
+}
+if (submit_name_change) {
+  submit_name_change.addEventListener("click", () => {
+    const p_name_control = document.getElementById("profile-name-control");
+    const p_name = document.getElementById("profile-name");
 
-  // Draw pattern
-  for (let x = 0; x < width; x += 10) {
-    for (let y = 0; y < height; y += 10) {
-      // Get random color from colors array
-      const color = colors[Math.floor(Math.random() * colors.length)];
-
-      // Set fill color
-      ctx.fillStyle = color;
-
-      // Draw rectangle
-      ctx.fillRect(x, y, 10, 10);
+    p_name_control.style.display = "none";
+    p_name.style.display = "block";
+  });
+}
+if (generate_DP_with_initials) {
+  generate_DP_with_initials.addEventListener("change", () => {
+    if (generate_DP_with_initials.checked) {
+      document.getElementById("color-picker-container").style.display = "flex";
+    } else {
+      document.getElementById("color-picker-container").style.display = "none";
     }
-  }
+  });
 }
-
-// Returns a random color in hexadecimal format
-function getRandomColor() {
-  const letters = "0123456789ABCDEF";
-  let color = "#";
-
-  for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-
-  return color;
-}
-
-window.onload = generatePattern;
 
 // Generate initial pattern
-generate_DP.addEventListener("click", generatePattern);
+if (generate_DP) {
+  generate_DP.addEventListener("click", () => {
+    if (generate_DP_with_initials.checked) {
+      generatePattern();
+    } else {
+      generatePatternWithInitials();
+    }
+  });
+}
 
 // Save button click event
-save_DP.addEventListener("click", function () {
-  // Convert canvas image to data URL
-  const dataURL = canvas.toDataURL("image/png");
+if (save_DP) {
+  save_DP.addEventListener("click", function () {
+    // Convert canvas image to data URL
+    const dataURL = canvas.toDataURL("image/png");
 
-  // Create an anchor element
-  const link = document.createElement("a");
-  link.href = dataURL;
-  link.download = "User-DP.png";
+    // Create an anchor element
+    const link = document.createElement("a");
+    link.href = dataURL;
+    link.download = "User-DP.png";
 
-  // Simulate click on the anchor element
-  link.click();
-});
+    // Simulate click on the anchor element
+    link.click();
+  });
+}
 
 for (var i = 0; i < submit_DP.length; i++) {
   submit_DP[i].addEventListener("click", async function () {
@@ -71,4 +72,23 @@ for (var i = 0; i < submit_DP.length; i++) {
     formData.append("image", imageBlob, "dp.png");
     console.log(formData.get("image"));
   });
+}
+
+if (profile_change_name) {
+  profile_change_name.addEventListener("click", () => {
+    const p_name_control = document.getElementById("profile-name-control");
+    const p_name = document.getElementById("profile-name");
+
+    p_name_control.style.display = "block";
+    p_name.style.display = "none";
+  });
+}
+
+const p_F_Input = document.querySelector(".profile-fname-input");
+const p_L_Input = document.querySelector(".profile-lname-input");
+if (p_F_Input) {
+  p_F_Input.addEventListener("input", updateInitials);
+}
+if (p_L_Input) {
+  p_L_Input.addEventListener("input", updateInitials);
 }
