@@ -198,3 +198,7 @@ We can use `profile-font-Complementary` class to auto assign reliable color for 
 ##### <span id="cp-radio">Color Picker Radio</span>
 
 ##### <span id="complementory-radio">Complementory Radio</span>
+
+## <span id="dev-note">Developer Note</span>
+
+### If you find this project useful or interesting, please consider giving it a star on GitHub by clicking the Star button at the top. Your support is greatly appreciated!
