@@ -1,17 +1,8 @@
-<style>
-    .new{
-      background-color:red;
-      border-radius:5px;
-      padding:2px;
-      font-weight:bold;
-    }
-</style>
-
 # Anonymous-dp V2 - Docs is still under development
 
 ## Anonymous-dp updated !!!
 
-#### Many <span class="new">new</span> features are unlocked in this version.
+#### Many <span style="background-color:red;border-radius:5px;padding:2px;font-weight:bold;">new</span> features are unlocked in this version.
 
 ### features
 
