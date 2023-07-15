@@ -1,4 +1,4 @@
-# Anonymous-dp V2 - Docs is still under development
+# Anonymous-dp V2
 
 ## Anonymous-dp updated !!!
 
@@ -15,6 +15,8 @@
 - Adjustable font size of initial letters.
 
 - Adjustable font color of initial letters.
+
+- Random Colors for DP and initial letters in mode 3.
 
 | Features                     | Mode-1  | Mode-2  | Mode-3  |
 | ---------------------------- | ------- | ------- | ------- |
@@ -62,9 +64,7 @@
     - <a href="#save-btn">Save button</a>
     - <a href="#regenerate-btn">Regenerate Button</a>
     - <a href="#Name-Edit">Name Editor Inputs</a>
-    - <a href="#initial-checkbox">Generate DP With initials Checkbox</a>
-    - <a href="#cp-radio">Color Picker Radio</a>
-    - <a href="#complementory-radio">Complementory Radio</a>
+    - <a href="#cp-btn">Color Picker Radio</a>
 
 - <a href="#dev-note">Developer Note</a>
 
@@ -116,19 +116,21 @@ import javascript code :
 
 ## <span id="using-html">Using Anonymous-dp in HTML webpage</span>
 
-### <span id="Supported-Classes">Supported Classes</span>
+### <span id="Supported-Classes">Supported Classes For Canvas</span>
 
 | Classes                             | Mode-1  | Mode-2  | Mode-3  |
 | ----------------------------------- | ------- | ------- | ------- |
 | profile-font-color-{hex color code} | &#9746; | &#9745; | &#9745; |
 | profile-font-size-{1-10}            | &#9746; | &#9745; | &#9745; |
-| profile-font-Complementary          | &#9746; | &#9745; | &#9746; |
+| profile-font-complementary          | &#9746; | &#9745; | &#9746; |
+| profile-random-dp-color             | &#9746; | &#9746; | &#9745; |
+| profile-random-font-color           | &#9746; | &#9745; | &#9745; |
 
 ### <span id="elements">Elements</span>
 
 #### <span id="showFName"> Showing First & Last Name in a Element</span>
 
-Mode-1 need two text element classes to get initial letters.classes should be `profile-fname` and `profile-lname`
+Mode-1 needs two text element with `profile-fname` and `profile-lname` classes to get initial letters.
 
 ```
 <p class="profile-fname">Rizmy</p>
@@ -139,13 +141,13 @@ Mode-1 need two text element classes to get initial letters.classes should be `p
 
 ##### <span id="canvas-mods">Modes</span>
 
-our Canvas(profile picture) has three modes classes,`mode-1`,`mode-2` and `mode-3` Class.lets put all together.
+our Canvas(profile picture) has three modes classes,`mode-1`,`mode-2` and `mode-3` .lets put all together.
 
 using `mode-1` class
 
 ```
 <canvas id="profile-picture"
-        class="mode-1 profile-font-size-7 profile-font-color-433656"
+        class="mode-1"
         width="200"
         height="200">
 </canvas>
@@ -175,6 +177,8 @@ using `mode-3` class
 
 We can use `profile-font-size-7` class to adjust initial letters on profile picture.
 
+supported modes : `mode-2`,`mode-3`
+
 ```
 <canvas id="profile-picture"
         class="mode-3 profile-font-size-7
@@ -187,9 +191,13 @@ We can use `profile-font-size-7` class to adjust initial letters on profile pict
 
 We can use `profile-font-Complementary` class to auto assign reliable color for initial letters according to Background color on profile picture.
 
+supported modes : `mode-2`,`mode-3`
+
+Note: In `mode-3`,Complementary color can be apply for initial letters When Profile Picture is set to `profile-random-dp-color`
+
 ```
 <canvas id="profile-picture"
-        class="mode-2 profile-font-Complementary
+        class="mode-3 profile-font-Complementary profile-random-dp-color"
         width="200"
         height="200">
 </canvas>
@@ -199,15 +207,36 @@ We can use `profile-font-Complementary` class to auto assign reliable color for 
 
 ##### <span id="save-btn">Save button</span>
 
+Use `profile-save-dp` id to save the DP.
+
+```
+<button id="profile-save-dp">Save DP</button>
+```
+
 ##### <span id="regenerate-btn">Regenerate Button</span>
+
+Use `profile-generate-dp` id to Regenerate a DP.
+
+```
+<button id="profile-generate-dp">Generate DP</button>
+```
 
 ##### <span id="Name-Edit">Name Editor Inputs</span>
 
-##### <span id="initial-checkbox">Generate DP With initials Checkbox</span>
+Use `profile-fname-input` and `profile-lname-input` classes name to Edit UserName
 
-##### <span id="cp-radio">Color Picker Radio</span>
+```
+<input type="text" class="profile-fname-input" placeholder="first name" />
+<input type="text" class="profile-lname-input" placeholder="last name" />
+```
 
-##### <span id="complementory-radio">Complementory Radio</span>
+##### <span id="cp-btn">Color Picker Button</span>
+
+Use `profile-color-picker` to Pick a color for initial Letters.
+
+```
+<input type="color" id="profile-color-picker" />
+```
 
 ## <span id="dev-note">Developer Note</span>
 

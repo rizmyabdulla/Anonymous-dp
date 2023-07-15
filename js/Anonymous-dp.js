@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ctx.fillStyle = complementaryColor();
     } else if (
       canvas.classList.contains("mode-2") &&
-      canvas.classList.contains("profile-random-color")
+      canvas.classList.contains("profile-random-font-color")
     ) {
       ctx.fillStyle = generateRandomColor();
     } else if (colorPicker) {
