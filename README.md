@@ -16,16 +16,21 @@
 
 - Adjustable font color of initial letters.
 
-| Features               | Mode-1  | Mode-2  | Mode-3  |
-| ---------------------- | ------- | ------- | ------- |
-| Background Pattern     | &#9745; | &#9745; | &#9746; |
-| Initial letters        | &#9746; | &#9745; | &#9746; |
-| background solid color | &#9746; | &#9746; | &#9745; |
+| Features                     | Mode-1  | Mode-2  | Mode-3  |
+| ---------------------------- | ------- | ------- | ------- |
+| Background Pattern           | &#9745; | &#9745; | &#9746; |
+| Initial letters              | &#9746; | &#9745; | &#9746; |
+| background solid color       | &#9746; | &#9746; | &#9745; |
+| random profile picture Color | &#9746; | &#9746; | &#9745; |
+| random letter Color          | &#9746; | &#9745; | &#9745; |
+| complementary letter color   | &#9746; | &#9745; | &#9745; |
+| manual letter color          | &#9746; | &#9745; | &#9745; |
 
 ## docs
 
 - <a href="#live-preview">Live Previews</a>
 
+  - <a href="mode-home">Home Page</a>
   - <a href="#mode-1">mode-1</a>
   - <a href="#mode-2">mode-2</a>
   - <a href="#mode-3">mode-3</a>
@@ -65,20 +70,25 @@
 
 ## Live Preview
 
+### <span id="mode-home">Mome Page</span>
+
+Live preview available on :
+https://rizmyabdulla.github.io/Anonymous-dp/demo/mode1.html
+
 ### <span id="mode-1">Mode-1</span>
 
 Live preview available on :
-https://rizmyabdulla.github.io/Anonymous-dp/mode1.html
+https://rizmyabdulla.github.io/Anonymous-dp/demo/mode1.html
 
 ### <span id="mode-2">Mode-2</span>
 
 Live preview available on :
-https://rizmyabdulla.github.io/Anonymous-dp/mode2.html
+https://rizmyabdulla.github.io/Anonymous-dp/demo/mode2.html
 
 ### <span id="mode-3">Mode-3</span>
 
 Live preview available on :
-https://rizmyabdulla.github.io/Anonymous-dp/mode3.html
+https://rizmyabdulla.github.io/Anonymous-dp/demo/mode3.html
 
 ## <span id="intergration">Anonymous-dp Intergration</span>
 
@@ -108,11 +118,11 @@ import javascript code :
 
 ### <span id="Supported-Classes">Supported Classes</span>
 
-| Classes                              | Mode-1  | Mode-2  | Mode-3  |
-| ------------------------------------ | ------- | ------- | ------- |
-| profile-font-color-{hash color code} | &#9746; | &#9745; | &#9745; |
-| profile-font-size-{1-10}             | &#9746; | &#9745; | &#9745; |
-| profile-font-Complementary           | &#9746; | &#9745; | &#9746; |
+| Classes                             | Mode-1  | Mode-2  | Mode-3  |
+| ----------------------------------- | ------- | ------- | ------- |
+| profile-font-color-{hex color code} | &#9746; | &#9745; | &#9745; |
+| profile-font-size-{1-10}            | &#9746; | &#9745; | &#9745; |
+| profile-font-Complementary          | &#9746; | &#9745; | &#9746; |
 
 ### <span id="elements">Elements</span>
 
@@ -201,4 +211,6 @@ We can use `profile-font-Complementary` class to auto assign reliable color for 
 
 ## <span id="dev-note">Developer Note</span>
 
-### If you find this project useful or interesting, please consider giving it a star on GitHub by clicking the Star button at the top. Your support is greatly appreciated!
+#### If you find this project useful or interesting, please consider giving it a star on GitHub by clicking the Star button at the top. Your support is greatly appreciated! &#10084;
+
+#### Contributions are welcome! If you find any bugs or want to improve the project, please open an issue or submit a pull request. Make sure to follow the contribution guidelines mentioned in the repository.
