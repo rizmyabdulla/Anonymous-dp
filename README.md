@@ -100,7 +100,7 @@ import javascript code via :
 `https://cdn.jsdelivr.net/gh/RizmyAbdulla/Anonymous-dp@main/Anonymous-dp.js`
 
 ```
-<script src="https://cdn.jsdelivr.net/gh/RizmyAbdulla/Anonymous-dp@main/Anonymous-dp.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/RizmyAbdulla/Anonymous-dp@main/js/Anonymous-dp.js
 ```
 
 ### <span id="locally">Via Locally</span>
