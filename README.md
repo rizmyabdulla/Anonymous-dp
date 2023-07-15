@@ -1,5 +1,7 @@
 # Anonymous-dp V2
 
+![cover picture](cover.jpg)
+
 ## Anonymous-dp updated !!!
 
 #### Many <span style="background-color:red;border-radius:5px;padding:2px;font-weight:bold;">new</span> features are unlocked in this version.

@@ -292,10 +292,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Color picker
 
+  if (colorPicker && !colorPickerBtn) {
+    colorPicker.addEventListener("input", function () {
+      const color = colorPicker.value;
+      textToChange.style.color = color;
+    });
+  }
   if (colorPickerBtn) {
+    // colorPicker.addEventListener("input", function () {
+    //   const color = colorPicker.value;
+    //   textToChange.style.color = color;
+    // });
+
+    // Flag to track if color picker is open
+    var isColorPickerOpen = false;
+
     // Add click event listener to the color picker button
     colorPickerBtn.addEventListener("click", function () {
       colorPicker.click();
+      isColorPickerOpen = true;
+    });
+
+    colorPicker.addEventListener("focus", function () {
+      isColorPickerOpen = true;
+      console.log(isColorPickerOpen);
     });
 
     // Handle color change event
@@ -303,13 +323,31 @@ document.addEventListener("DOMContentLoaded", function () {
       // Get the selected color
       const selectedColor = colorPicker.value;
       textToChange.style.color = selectedColor;
-      console.log("Selected color:", selectedColor);
     });
 
-    // colorPicker.addEventListener("input", function () {
-    //   const color = colorPicker.value;
-    //   textToChange.style.color = color;
-    // });
+    colorPicker.addEventListener("blur", function () {
+      // Delay the execution to allow time for the click event to trigger on colorPickerBtn
+      isColorPickerOpen = false;
+
+      // if (!isColorPickerOpen) {
+      //   // Color picker has been dismissed or closed
+      //   console.log("Color picker dismissed");
+      //   checkMode();
+      // }
+
+      setTimeout(function () {
+        // Check if the color picker is still closed after the timeout
+        if (!isColorPickerOpen) {
+          // Color picker has been dismissed or closed
+          checkMode();
+        }
+      }, 100);
+    });
+
+    // Set the flag to false when the color picker is clicked again
+    colorPicker.addEventListener("click", function () {
+      isColorPickerOpen = false;
+    });
   }
 
   // Update name
