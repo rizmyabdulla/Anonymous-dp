@@ -14,7 +14,6 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 10px;
 }
 .nav {
   display: flex;
@@ -34,17 +33,32 @@ body {
   color: white;
   text-decoration: none;
   margin-left: 10px;
-  transition: 2s;
 }
 
 #back-btn:hover {
   transition: 2s;
   translate: 10px;
 }
+.g-btn {
+  margin: 0px 10px !important;
+}
+#docs-btn {
+  font-size: x-large;
+  background: none;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#docs-btn:hover {
+  transition: 1s;
+  scale: 1.25;
+}
 .p-head {
   width: 100%;
-  text-align: center;
   color: white;
+  margin-left: 10px;
 }
 #navigate-section {
   display: flex;
@@ -90,6 +104,7 @@ body {
 }
 
 #btn-group {
+  display: flex;
   margin-top: 30px;
 }
 #btn-group button {
@@ -134,10 +149,10 @@ footer p {
   display: none;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 10px;
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: grey;
   border-radius: 10px;
 }
@@ -163,5 +178,9 @@ footer p {
   }
   .functions-div {
     width: 55%;
+  }
+  #btn-group {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
