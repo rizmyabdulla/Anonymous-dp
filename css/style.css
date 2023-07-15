@@ -14,6 +14,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 10px;
 }
 .nav {
   display: flex;
@@ -33,11 +34,11 @@ body {
   color: white;
   text-decoration: none;
   margin-left: 10px;
-  transition:2s;
+  transition: 2s;
 }
 
 #back-btn:hover {
-  transition:2s;
+  transition: 2s;
   translate: 10px;
 }
 .p-head {
@@ -131,6 +132,14 @@ footer p {
 }
 #profile-name-change {
   display: none;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: grey;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 420px) {
