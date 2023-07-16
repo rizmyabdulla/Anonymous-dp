@@ -75,19 +75,19 @@
 ### <span id="mode-home">Mome Page</span>
 
 Live preview available on :
-https://rizmyabdulla.github.io/Anonymous-dp/demo/mode1.html
+https://rizmyabdulla.github.io/Anonymous-dp/demo/
 
-### <span id="mode-1">Mode-1</span>
+### <span id="mode-1">Mode-1 Live Preview</span>
 
 Live preview available on :
 https://rizmyabdulla.github.io/Anonymous-dp/demo/mode1.html
 
-### <span id="mode-2">Mode-2</span>
+### <span id="mode-2">Mode-2 Live Preview</span>
 
 Live preview available on :
 https://rizmyabdulla.github.io/Anonymous-dp/demo/mode2.html
 
-### <span id="mode-3">Mode-3</span>
+### <span id="mode-3">Mode-3 Live Preview</span>
 
 Live preview available on :
 https://rizmyabdulla.github.io/Anonymous-dp/demo/mode3.html
