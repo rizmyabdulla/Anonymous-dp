@@ -99,7 +99,7 @@ https://rizmyabdulla.github.io/Anonymous-dp/demo/mode3.html
 #### you can intergrate Anonymous-dp from CDN (jsdeliver)
 
 import javascript code via :
-`https://cdn.jsdelivr.net/gh/RizmyAbdulla/Anonymous-dp@main/Anonymous-dp.js`
+`<script src="https://cdn.jsdelivr.net/gh/RizmyAbdulla/Anonymous-dp@main/js/Anonymous-dp.js`
 
 ```
 <script src="https://cdn.jsdelivr.net/gh/RizmyAbdulla/Anonymous-dp@main/js/Anonymous-dp.js
