@@ -34,7 +34,7 @@
 
 - <a href="#live-preview">Live Previews</a>
 
-  - <a href="mode-home">Home Page</a>
+  - <a href="#mode-home">Home Page</a>
   - <a href="#mode-1">mode-1</a>
   - <a href="#mode-2">mode-2</a>
   - <a href="#mode-3">mode-3</a>
