@@ -72,7 +72,7 @@
 
 ## Live Preview
 
-### <span id="mode-home">Mome Page</span>
+### <span id="mode-home">Home Page</span>
 
 Live preview available on :
 https://rizmyabdulla.github.io/Anonymous-dp/demo/
