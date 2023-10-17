@@ -5,6 +5,7 @@
 body {
   margin: 0;
   padding: 70px 0px;
+  background-color: rgb(41, 39, 39);
 }
 
 #profile-picture {
@@ -35,10 +36,6 @@ body {
   margin-left: 10px;
 }
 
-#back-btn:hover {
-  transition: 2s;
-  translate: 10px;
-}
 .g-btn {
   margin: 0px 10px !important;
 }
@@ -51,10 +48,7 @@ body {
   margin-left: 10px;
   margin-right: 10px;
 }
-#docs-btn:hover {
-  transition: 1s;
-  scale: 1.25;
-}
+
 .p-head {
   width: 100%;
   color: white;
@@ -83,16 +77,18 @@ body {
   padding: 10px;
 }
 .functions-div {
-  background-color: antiquewhite;
+  background-color: rgb(51, 54, 58);
   border: 1px solid rgb(252, 209, 153);
   padding: 5px;
   width: 35%;
 }
 .functions-div ul li {
   margin-bottom: 5px;
+  color: white;
 }
 .functions-div h4 {
   text-align: center;
+  color: white;
 }
 #dp {
   margin-top: 10px;
@@ -114,6 +110,11 @@ body {
   padding: 10px;
   margin: 10px;
 }
+
+#profile-name{
+  color: aliceblue;
+}
+
 #btn-group button:hover {
   background-color: blue;
   color: white;

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Elements
+  // get Elements from DOM
   const textToChange = document.getElementById("profile-name");
   const colorPicker = document.getElementById("profile-color-picker");
   const generate_DP = document.getElementById("profile-generate-dp");
