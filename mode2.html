@@ -3,23 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mode-1</title>
+    <title>mode-2</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="shortcut icon" href="../assets/favi.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./assets/favi.ico" type="image/x-icon" />
   </head>
   <body>
     <div id="container">
       <div class="nav">
+      
         <a href="index.html" id="back-btn">&#10137;</a>
         <div class="p-head">
-          <h3>MODE 1</h3>
+          <h3>MODE 2</h3>
         </div>
         <a
-          title="Docs"
-          href="https://rizmyabdulla.github.io/Anonymous-dp/"
-          id="docs-btn"
-          >&#128366;</a
-        >
+        title="Docs"
+        href="https://rizmyabdulla.github.io/Anonymous-dp/"
+        id="docs-btn"
+        >&#128366;</a
+      >
         <div class="g-btn">
           <a
             class="github-button"
@@ -35,7 +36,7 @@
       <div id="dp">
         <canvas
           id="profile-picture"
-          class="mode-1"
+          class="mode-2 profile-font-size-10"
           width="200"
           height="200"
         ></canvas>
@@ -63,12 +64,25 @@
       <div id="btn-group">
         <button id="profile-save-dp">Save DP</button>
         <button id="profile-generate-dp">Generate DP</button>
+        <!-- <button id="color-pick">
+          Color Picker
+          <span><input type="color" id="profile-color-picker" /></span>
+        </button> -->
+        <button id="profile-colorPickerBtn">
+          Open Color Picker <input type="color" id="profile-color-picker" />
+        </button>
       </div>
-
       <div class="functions-div">
-        <h4>Functions</h4>
+        <h4>mode 2 - Functions</h4>
         <ul>
           <li>Generating Anonymous Profile Picture</li>
+          <li>Showing initial Letters of Username</li>
+          <li>color Picker for initial Letters</li>
+          <li>Custom Colors can be Applied from class for initial Letters</li>
+          <li>
+            complementary Color can be Applied from class for initial Letters
+          </li>
+          <li>random Colors can be Applied from class for initial Letters</li>
         </ul>
       </div>
     </div>
@@ -82,7 +96,7 @@
       </p>
     </footer>
 
-    <script src="../src/Anonymous-dp.js"></script>
+    <script src="./src/Anonymous-dp.min.js"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
 </html>
