@@ -32,213 +32,89 @@
 
 ## docs
 
-- <a href="#live-preview">Live Previews</a>
+The following documentation provides a comprehensive guide on how to customize and personalize a user's profile, including generating a display picture (DP), changing text, and adjusting colors using JavaScript. This documentation is intended for developers and users interested in implementing profile customization features.
 
-  - <a href="mode-home">Home Page</a>
-  - <a href="#mode-1">mode-1</a>
-  - <a href="#mode-2">mode-2</a>
-  - <a href="#mode-3">mode-3</a>
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Prerequisites](#prerequisites)
+3. [Initialization](#initialization)
+4. [Profile Customization](#profile-customization)
+   - [Mode 1 - Random Color Pattern](#mode-1-random-color-pattern)
+   - [Mode 2 - Initials](#mode-2-initials)
+   - [Mode 3 - Colored Background and Initials](#mode-3-colored-background-and-initials)
+5. [Events and Interactions](#events-and-interactions)
+   - [Generate and Save Display Picture](#generate-and-save-display-picture)
+   - [Color Picker](#color-picker)
+   - [Name Change](#name-change)
+6. [Canvas Modes](#canvas-modes)
+7. [Customization Functions](#customization-functions)
 
-- <a href="#intergration">Anonymous-dp Intergration</a>
+## Introduction
 
-  - <a href="#cdn">via CDN</a>
-  - <a href="#locally">via Locally</a>
+This documentation explains how to create a user profile customization system that allows users to personalize their profile pictures, text, and colors. The system is built using JavaScript and HTML5 Canvas for creating dynamic display pictures.
 
-<!-- - <a href="#implement">Implementation in HTML Page</a>
+## Prerequisites
 
-  - <a href="#scripts">Scripts</a>
-  - <a href="#styles">Styles</a>
-  - <a href="#widgets">Widgets</a> -->
+Before you implement the profile customization features, ensure you have the following elements in your HTML:
 
-- <a href="#using-html">Using Anonymous-dp in HTML webpage</a>
+- `profile-name`: The element that displays the user's name.
+- `profile-color-picker`: An input element for selecting text color.
+- `profile-generate-dp`: A button for generating the display picture.
+- `profile-save-dp`: A button for saving the display picture.
+- `profile-cname-btn`: A button to change the name.
+- `profile-name-submit`: A button to submit the changed name.
+- `profile-picture`: The HTML5 canvas element for rendering the display picture.
+- `profile-fname-input`: An input element for the first name.
+- `profile-lname-input`: An input element for the last name.
+- `profile-font-color-xxx`: CSS classes for specifying custom font color.
+- `profile-font-complementary`: CSS class for complementary font color.
+- `profile-random-font-color`: CSS class for random font color.
+- `profile-font-size-xx`: CSS classes for specifying custom font size.
+- `profile-dp-color-xxx`: CSS classes for specifying custom display picture background color.
+- `profile-random-dp-color`: CSS class for random display picture background color.
 
-  - <a href="#Supported-Classes">Supported-Classes</a>
+## Initialization
 
-  - <a href="#elements">Elements</a>
+The profile customization system is initialized when the DOM is ready. To ensure this, an event listener is added for the `DOMContentLoaded` event. The system retrieves necessary DOM elements and initializes the HTML5 canvas.
 
-    - <a href="#showFName">Showing First & Last Name in a Element</a>
+## Profile Customization
 
-  - <a href="#canvas">Canvas</a>
-    - <a href="#canvas-mods">Modes</a>
-    - <a href="#canvas-font-size">Font-size</a>
-    - <a href="#canvas-complementary">Complementary color</a>
-  - <a href="#functional">Creating Functional Elements</a>
-    - <a href="#save-btn">Save button</a>
-    - <a href="#regenerate-btn">Regenerate Button</a>
-    - <a href="#Name-Edit">Name Editor Inputs</a>
-    - <a href="#cp-btn">Color Picker Radio</a>
+### Mode 1 - Random Color Pattern
 
-- <a href="#dev-note">Developer Note</a>
+In Mode 1, a random color pattern is generated and displayed on the canvas. The user's name is not used in this mode. To create a random color pattern, the system generates random colors and fills the canvas with rectangles of random colors.
 
-## Live Preview
+### Mode 2 - Initials
 
-### <span id="mode-home">Mome Page</span>
+In Mode 2, the user's initials are displayed on the canvas. The system generates a random color pattern as a background and sets the font color based on the selected color or other customization options.
 
-Live preview available on :
-https://rizmyabdulla.github.io/Anonymous-dp/demo/
+### Mode 3 - Colored Background and Initials
 
-### <span id="mode-1">Mode-1 Live Preview</span>
+Mode 3 combines a colored background with user initials. The background color and font color can be customized based on user preferences.
 
-Live preview available on :
-https://rizmyabdulla.github.io/Anonymous-dp/demo/mode1.html
+## Events and Interactions
 
-### <span id="mode-2">Mode-2 Live Preview</span>
+### Generate and Save Display Picture
 
-Live preview available on :
-https://rizmyabdulla.github.io/Anonymous-dp/demo/mode2.html
+Users can generate and save their display pictures by clicking the "Generate DP" and "Save DP" buttons, respectively. The system generates the DP on the canvas and allows users to save it as an image.
 
-### <span id="mode-3">Mode-3 Live Preview</span>
+### Color Picker
 
-Live preview available on :
-https://rizmyabdulla.github.io/Anonymous-dp/demo/mode3.html
+Users can select a custom text color using the color picker input. The text color is applied to the user's name and initials.
 
-## <span id="intergration">Anonymous-dp Intergration</span>
+### Name Change
 
-### <span id="cdn">Via CDN</span>
+Users can change their displayed name by clicking the "Change Name" button. They can input their first and last names and submit the changes by clicking the "Submit" button.
 
-#### you can intergrate Anonymous-dp from CDN (jsdeliver)
+## Canvas Modes
 
-import javascript code via :
-`<script src="https://cdn.jsdelivr.net/gh/RizmyAbdulla/Anonymous-dp@main/js/Anonymous-dp.js`
+The profile customization system supports three canvas modes: Mode 1, Mode 2, and Mode 3. Each mode provides different customization options. To change the canvas mode, add a class to the canvas element. The class names are "mode-1," "mode-2," and "mode-3."
 
-```
-<script src="https://cdn.jsdelivr.net/gh/RizmyAbdulla/Anonymous-dp@main/js/Anonymous-dp.js
-```
+## Customization Functions
 
-### <span id="locally">Via Locally</span>
+The system includes various functions for customization, such as generating random colors and calculating complementary colors for text. These functions enable dynamic display picture creation based on user preferences.
 
-#### you can intergrate Anonymous-dp by Downloading js files
+For specific implementation details and usage examples, please refer to the code comments and the HTML structure of your project.
 
-import javascript code :
-`path/to/Anonymous-dp.js`
-
-```
-<script src="path/to/Anonymous-dp.js"></script>
-```
-
-## <span id="using-html">Using Anonymous-dp in HTML webpage</span>
-
-### <span id="Supported-Classes">Supported Classes For Canvas</span>
-
-| Classes                             | Mode-1  | Mode-2  | Mode-3  |
-| ----------------------------------- | ------- | ------- | ------- |
-| profile-font-color-{hex color code} | &#9746; | &#9745; | &#9745; |
-| profile-font-size-{1-10}            | &#9746; | &#9745; | &#9745; |
-| profile-font-complementary          | &#9746; | &#9745; | &#9746; |
-| profile-random-dp-color             | &#9746; | &#9746; | &#9745; |
-| profile-random-font-color           | &#9746; | &#9745; | &#9745; |
-
-### <span id="elements">Elements</span>
-
-#### <span id="showFName"> Showing First & Last Name in a Element</span>
-
-Mode-1 needs two text element with `profile-fname` and `profile-lname` classes to get initial letters.
-
-```
-<p class="profile-fname">Rizmy</p>
-<p class="profile-lname">Abdulla</p>
-```
-
-#### <span id="canvas"> Canvas</span>
-
-##### <span id="canvas-mods">Modes</span>
-
-our Canvas(profile picture) has three modes classes,`mode-1`,`mode-2` and `mode-3` .lets put all together.
-
-using `mode-1` class
-
-```
-<canvas id="profile-picture"
-        class="mode-1"
-        width="200"
-        height="200">
-</canvas>
-```
-
-using `mode-2` class
-
-```
-<canvas id="profile-picture"
-        class="mode-2 profile-font-size-7 profile-font-Complementary
-        width="200"
-        height="200">
-</canvas>
-```
-
-using `mode-3` class
-
-```
-<canvas id="profile-picture"
-        class="mode-3 profile-font-size-7 profile-font-color-433656"
-        width="200"
-        height="200">
-</canvas>
-```
-
-##### <span id="canvas-font-size">Font-size</span>
-
-We can use `profile-font-size-7` class to adjust initial letters on profile picture.
-
-supported modes : `mode-2`,`mode-3`
-
-```
-<canvas id="profile-picture"
-        class="mode-3 profile-font-size-7
-        width="200"
-        height="200">
-</canvas>
-```
-
-##### <span id="canvas-complementary">Complementary color</span>
-
-We can use `profile-font-Complementary` class to auto assign reliable color for initial letters according to Background color on profile picture.
-
-supported modes : `mode-2`,`mode-3`
-
-Note: In `mode-3`,Complementary color can be apply for initial letters When Profile Picture is set to `profile-random-dp-color`
-
-```
-<canvas id="profile-picture"
-        class="mode-3 profile-font-Complementary profile-random-dp-color"
-        width="200"
-        height="200">
-</canvas>
-```
-
-#### <span id="functional">Creating Functional Elements</span>
-
-##### <span id="save-btn">Save button</span>
-
-Use `profile-save-dp` id to save the DP.
-
-```
-<button id="profile-save-dp">Save DP</button>
-```
-
-##### <span id="regenerate-btn">Regenerate Button</span>
-
-Use `profile-generate-dp` id to Regenerate a DP.
-
-```
-<button id="profile-generate-dp">Generate DP</button>
-```
-
-##### <span id="Name-Edit">Name Editor Inputs</span>
-
-Use `profile-fname-input` and `profile-lname-input` classes name to Edit UserName
-
-```
-<input type="text" class="profile-fname-input" placeholder="first name" />
-<input type="text" class="profile-lname-input" placeholder="last name" />
-```
-
-##### <span id="cp-btn">Color Picker Button</span>
-
-Use `profile-color-picker` to Pick a color for initial Letters.
-
-```
-<input type="color" id="profile-color-picker" />
-```
 
 ## <span id="dev-note">Developer Note</span>
 
