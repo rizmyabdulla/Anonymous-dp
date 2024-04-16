@@ -2,7 +2,7 @@
 
 ![cover picture](./assets/cover.jpg)
 
-## Anonymous-dp updated !!!
+## Anonymous-dp updated !
 
 > preview features : https://rizmyabdulla.github.io/Anonymous-dp/index.html
 
